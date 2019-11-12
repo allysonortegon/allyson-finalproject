@@ -1,21 +1,28 @@
 {% extends '_layouts/base.njk' %}
 
-{% block page_title %}New index page title{% endblock %}
+{% block page_title %}Queen - The Unofficial Website{% endblock %}
 
 {% block content %}
 
 <div class="container">
-  <div class="row">
-    <div class="col">
-    <h1>Main headline</h1>
-    <p class="author">By Obi-Wan Kenobi</p>
-    <p class="date"> Published May 25, 1977</p>
+    <div class="jumbotron">
+      <h1 class="display-4">Queen</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
     </div>
-  </div>
-  <div class="row">
+    <div class="row">
     <div class="col">
+      <h1>Main headline</h1>
+      <p class="author">By Obi-Wan Kenobi</p>
+      <p class="date"> Published May 25, 1977</p>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col">
+    </div>
       <p>
-        Lucas ipsum dolor <a href="detail-book-example.html">link to book page example</a> amidala sith dooku solo moff organa obi-wan windu. Gamorrean binks wedge darth. Mon darth mon kit ponda solo. Moff watto ackbar mothma moff anakin. Lando skywalker lars fett calrissian lars organa. Organa kenobi wedge darth jawa skywalker anakin. Twi'lek kit darth calamari lando kamino droid. Darth jawa fett grievous maul. Palpatine obi-wan leia tusken raider dagobah. Twi'lek qui-gon boba antilles yoda thrawn. Wampa luuke wampa skywalker. Moff ponda ackbar dagobah kit lobot jinn solo.
+        Lucas ipsum dolor amidala sith dooku solo moff organa obi-wan windu. Gamorrean binks wedge darth. Mon darth mon kit ponda solo. Moff watto ackbar mothma moff anakin. Lando skywalker lars fett calrissian lars organa. Organa kenobi wedge darth jawa skywalker anakin. Twi'lek kit darth calamari lando kamino droid. Darth jawa fett grievous maul. Palpatine obi-wan leia tusken raider dagobah. Twi'lek qui-gon boba antilles yoda thrawn. Wampa luuke wampa skywalker. Moff ponda ackbar dagobah kit lobot jinn solo.
       </p>
       <ul> 
         {% for book in data.books %}
@@ -24,7 +31,6 @@
           <li>This would display if the 'books' collection were empty</li>
         {% endfor %}
      </ul>
-    </div>
   </div>
 </div>
 {% endblock %}
