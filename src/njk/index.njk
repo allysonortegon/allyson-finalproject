@@ -3,56 +3,58 @@
 {% block page_title %}Queen - The Unofficial Website{% endblock %}
 
 {% block content %}
-   <div class="jumbotron"></div>
-   <div class="container">
-            <div class="row">
-            <div class="col">
-              <h1>Main headline</h1>
-              <p class="author">By Obi-Wan Kenobi</p>
-              <p class="date"> Published May 25, 1977</p>
-            </div>
-            </div>
-    <div class="row">
-    <div class="col">
-    </div>
-      <p>
-        Lucas ipsum dolor amidala sith dooku solo moff organa obi-wan windu. Gamorrean binks wedge darth. Mon darth mon kit ponda solo. Moff watto ackbar mothma moff anakin. Lando skywalker lars fett calrissian lars organa. Organa kenobi wedge darth jawa skywalker anakin. Twi'lek kit darth calamari lando kamino droid. Darth jawa fett grievous maul. Palpatine obi-wan leia tusken raider dagobah. Twi'lek qui-gon boba antilles yoda thrawn. Wampa luuke wampa skywalker. Moff ponda ackbar dagobah kit lobot jinn solo.
-      </p>
-  
-  <div class="row">
-        {% for members in data.members %}
-        <div class= "col-sm-3">
-              <div class="card-group">
-              <div class="card">
-                <img class= "img-fluid" src="img/members/{{ members.imagebw }}"> 
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <a href="" class="btn btn-dark">Go to page</a>
-                  </div>
-              </div>
-              </div>
+  <div class="jumbotron"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Main headline</h1>
+            <p class="author">By Obi-Wan Kenobi</p>
+            <p class="date"> Published May 25, 1977</p>
         </div>
-        {% endfor %}
+      </div>
+      <div class="row">
+        <div class="col">
+            <p>
+              Lucas ipsum dolor amidala sith dooku solo moff organa obi-wan windu. Gamorrean binks wedge darth. Mon darth mon kit ponda solo. Moff watto ackbar mothma moff anakin. Lando skywalker lars fett calrissian lars organa. Organa kenobi wedge darth jawa skywalker anakin. Twi'lek kit darth calamari lando kamino droid. Darth jawa fett grievous maul. Palpatine obi-wan leia tusken raider dagobah. Twi'lek qui-gon boba antilles yoda thrawn. Wampa luuke wampa skywalker. Moff ponda ackbar dagobah kit lobot jinn solo.
+            </p>
+    </div>
   </div>
 
   <div class="row">
-        {% for discography in data.discography%}
-          <li class="media">
-            <img class="align-self-center mr-3" src="img/covers/{{ discography.image }}">
-            <div class="media-body">
-              <h5 class="mt-0 mb-0"> {{ discography.title }}</h5>
-              <p class="mb-0"> {{ discography.year }} </p>
+        {% for members in data.members %}
+        <div class= "col-sm-3">
+            <div class="card-group">
+              <div class="card">
+                <img class= "img-fluid" src="img/members/{{ members.imagebw }}"> 
+                  <div class="card-body">
+                    <h5 class="card-title"> {{ members.name }} </h5>
+                    <p class="card-text"> {{ members.instruments }} </p>
+                    <a href="" class="btn btn-dark">Go to page</a>
+                  </div>
+              </div>
             </div>
-          </li>
+        </div>
+        {% endfor %}
+  </div>
+<section class="albums">
+  <div class="row"> 
+    <div class="col">
+        <ul class="list-unstyled"> 
+          <div class="row">
+          {% for discography in data.discography%}
+          <div class="col">
+            <li class="media">
+              <img class="mr-3 mb-5" src="img/covers/{{ discography.image }}">
+              <div class="media-body">
+                <h5> {{ discography.title }}</h5>
+                <p> {{ discography.year }} </p>
+              </div>
+            </li>
+          </div>
           {% endfor %}
-      <div>
-          <ul> 
-            {% for member in data.json %}
-              <li>{{ book.title }}, {{ book.author }}</li>
-            {% else %}
-              <li>This would display if the 'books' collection were empty</li>
-            {% endfor %}
+          </div>
         </ul>
-      </div>
+    </div>      
+  </div>
+</section>       
 {% endblock %}
