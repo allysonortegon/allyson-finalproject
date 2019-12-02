@@ -6,4 +6,59 @@
 
 .navbar-brand {
   font-family:'UnifrakturMaguntia', cursive;
+  font-size: 30px;
+}
+
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h5 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.author {
+  margin-bottom: 0px;
+  margin-top: -5px;
+  font-size: 17px;
+}
+
+.date {
+  margin-bottom: 25px;
+  margin-top: 5px;
+  font-size: 17px;
+}
+
+.blurb {
+  margin-bottom: 40px;
+}
+
+.linkes {
+  color: black;
+  text-decoration: underline;
+}
+
+a:hover {
+  color:red;
+}
+
+.nav-link {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+.header {
+  font-family:'UnifrakturMaguntia', cursive;
+  font-size: 70px;
+  margin-bottom: 0px;
+  margin-top: -20px;
+}
+
+.dropdown-item {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
