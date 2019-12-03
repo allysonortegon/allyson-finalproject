@@ -44,7 +44,7 @@ p {
 }
 
 a:hover {
-  color:red;
+  color: blue;
 }
 
 .nav-link {
@@ -61,4 +61,12 @@ a:hover {
 
 .dropdown-item {
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.chart {
+  margin-top: 60px;
 }

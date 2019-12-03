@@ -3,8 +3,7 @@
 {% block page_title %}Queen - The Unofficial Website{% endblock %}
 
 {% block content %}
-  <div class="jumbotron"></div>
-    <div class="container">
+<div class="container">
       <div class="row">
         <div class="col">
           <h1 class="header">Queen</h1>
@@ -14,13 +13,13 @@
       </div>
       <div class="row">
         <div class="col">
-            <p class="blurb">"There are people alive who do not enjoy Queen—who find the band too indulgent or too audacious—but I believe in my heart that those people are simply adrift. The critical conversations about Queen tend to linger on Freddie Mercury, Queen’s virtuosic and eternally strutting vocalist, but all four founding members—Mercury, the guitarist Brian May, the bassist John Deacon, and the drummer Roger Taylor—were extraordinary musicians. The band’s discography is theatrical, infectious, <a class= "linkes" href= "https://www.newyorker.com/culture/cultural-comment/a-truly-perfect-thirty-seconds-of-queen" target="_blank"> intemperate</a>."</p>
+          <p class="blurb">"There are people alive who do not enjoy Queen—who find the band too indulgent or too audacious—but I believe in my heart that those people are simply adrift. The critical conversations about Queen tend to linger on Freddie Mercury, Queen’s virtuosic and eternally strutting vocalist, but all four founding members—Mercury, the guitarist Brian May, the bassist John Deacon, and the drummer Roger Taylor—were extraordinary musicians. The band’s discography is theatrical, infectious, <a class= "linkes" href= "https://www.newyorker.com/culture/cultural-comment/a-truly-perfect-thirty-seconds-of-queen" target="_blank"> intemperate</a>."</p>
         </div>
       </div>
 
   <div class="row">
         {% for members in data.members %}
-        <div class= "col-sm-3">
+        <div class= "col-sm-6 col-md-3">
             <div class="card-group">
               <div class="card">
                 <img class= "img-fluid" src="img/members/{{ members.imagebw }}"> 
@@ -34,15 +33,18 @@
         </div>
         {% endfor %}
   </div>
+    <div class="chart">
+      <iframe title="Queen's Billboard Hits" aria-label="Bar Chart" id="datawrapper-chart-9CnQr" src="//datawrapper.dwcdn.net/9CnQr/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="619"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+    </div>
 <section class="albums">
   <div class="row"> 
     <div class="col">
         <ul class="list-unstyled"> 
           <div class="row">
           {% for discography in data.discography%}
-          <div class="col">
+          <div class="col-sm-6">
             <li class="media">
-              <img class="mr-3 mb-5" src="img/covers/{{ discography.image }}">
+              <img class="mr-3 mb-5" style="width:50%;" src="img/covers/{{ discography.image }}">
               <div class="media-body">
                 <h5> {{ discography.title }}</h5>
                 <p> {{ discography.year }} </p>
@@ -54,5 +56,6 @@
         </ul>
     </div>      
   </div>
-</section>       
+</section> 
+</div>      
 {% endblock %}
